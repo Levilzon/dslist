@@ -25,6 +25,9 @@ public class Jogos {
     @Column(name = "long_description",columnDefinition = "TEXT")
     private String descricaoDetalhada;
 
+    public Jogos(){
+
+    }
     public Jogos(Long id, String nome, int ano, String genero, String plataformas, double pontuacao, String imgURL, String descricaoResumida, String descricaoDetalhada){
         this.id = id;
         this.nome = nome;
