@@ -9,7 +9,7 @@ public class ListaDeJogos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long lista_Id;
-    @Column(name = "title")
+    @Column(name = "name")
     private String nome;
 
     public ListaDeJogos(){

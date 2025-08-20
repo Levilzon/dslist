@@ -1,5 +1,6 @@
 package com.cursodevsuperior.dslist.entidades;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -7,10 +8,12 @@ import jakarta.persistence.Table;
 import java.util.Objects;
 
 @Entity
-@Table(name = "belonging")
+@Table(name = "tb_belonging")
 public class Pertence {
+
     @EmbeddedId
     private PertencePK id = new PertencePK();
+    @Column(name = "position")
     private int posicao;
 
     public Pertence(){
@@ -22,10 +25,10 @@ public class Pertence {
         id.setLista(lista);
         this.posicao = posicao;
     }
-    public PertencePK getPertecenPK(){
+    public PertencePK getId(){
         return id;
     }
-    public void setPertencePK(PertencePK id){
+    public void setId(PertencePK id){
         this.id = id;
     }
     public int getPosicao(){

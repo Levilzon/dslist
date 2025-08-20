@@ -9,10 +9,10 @@ import java.util.Objects;
 @Embeddable
 public class PertencePK {
     @ManyToOne
-    @JoinColumn(name = "jogos_id")
+    @JoinColumn(name = "game_Id")
     private Jogos jogos;
     @ManyToOne
-    @JoinColumn(name = "lista_id")
+    @JoinColumn(name = "list_Id")
     private ListaDeJogos lista;
 
     public PertencePK(){
