@@ -38,7 +38,7 @@ public class Jogos {
     }
 
     public Long getId(){
-        return this.id;
+        return id;
     }
 
     public void setId(Long id){
@@ -46,49 +46,49 @@ public class Jogos {
     }
 
     public String getNome(){
-        return this.nome;
+        return nome;
     }
     public void setNome(String nome){
         this.nome = nome;
     }
     public int getAno(){
-        return this.ano;
+        return ano;
     }
     public void setAno(int ano){
         this.ano = ano;
     }
     public String getGenero(){
-        return this.genero;
+        return genero;
     }
     public void setGenero(String genero){
         this.genero = genero;
     }
     public String getPlataformas(){
-        return this.plataformas;
+        return plataformas;
     }
     public void setPlataformas(String plataformas){
         this.plataformas = plataformas;
     }
     public double getPontuacao(){
-        return this.pontuacao;
+        return pontuacao;
     }
     public void setPontuacao(double pontuacao){
         this.pontuacao = pontuacao;
     }
     public String getImgURL(){
-        return this.imgURL;
+        return imgURL;
     }
     public void setImgURL(String imgURL){
         this.imgURL = imgURL;
     }
     public String getDescricaoRsumida(){
-        return this.descricaoResumida;
+        return descricaoResumida;
     }
     public void setDescricaoResumida(String descricaoResumida){
         this.descricaoResumida= descricaoResumida;
     }
     public String getDescricaoDetalhada(){
-        return this.descricaoDetalhada;
+        return descricaoDetalhada;
     }
     public void setDescricaoDetalhada(String descricaoDetalhada){
         this.descricaoDetalhada = descricaoDetalhada;
