@@ -3,19 +3,26 @@ package com.cursodevsuperior.dslist.entidades;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_jogo")
+@Table(name = "TB_GAME")
 public class Jogos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "title")
     private String nome;
-    @Column(name = "data_de_lancamento")
+    @Column(name = "game_year")
     private int ano;
+    @Column(name = "genre")
     private String genero;
+    @Column(name = "platforms")
     private String plataformas;
+    @Column(name = "score")
     private double pontuacao;
+    @Column(name = "img_url")
     private String imgURL;
+    @Column(name = "short_description")
     private String descricaoResumida;
+    @Column(name = "long_description",columnDefinition = "TEXT")
     private String descricaoDetalhada;
 
     public Jogos(Long id, String nome, int ano, String genero, String plataformas, double pontuacao, String imgURL, String descricaoResumida, String descricaoDetalhada){
