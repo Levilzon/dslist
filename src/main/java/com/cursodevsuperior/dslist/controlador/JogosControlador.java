@@ -1,7 +1,6 @@
 package com.cursodevsuperior.dslist.controlador;
 
-import com.cursodevsuperior.dslist.entidades.Jogos;
-import com.cursodevsuperior.dslist.entidades.JogosMinDTO;
+import com.cursodevsuperior.dslist.DTO.JogosMinDTO;
 import com.cursodevsuperior.dslist.servicos.JogoServicos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

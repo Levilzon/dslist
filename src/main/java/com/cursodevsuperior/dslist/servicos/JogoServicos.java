@@ -1,7 +1,7 @@
 package com.cursodevsuperior.dslist.servicos;
 
 import com.cursodevsuperior.dslist.entidades.Jogos;
-import com.cursodevsuperior.dslist.entidades.JogosMinDTO;
+import com.cursodevsuperior.dslist.DTO.JogosMinDTO;
 import com.cursodevsuperior.dslist.repositorio.JogoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

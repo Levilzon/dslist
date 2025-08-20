@@ -1,9 +1,11 @@
-package com.cursodevsuperior.dslist.entidades;
+package com.cursodevsuperior.dslist.DTO;
 
-import jakarta.persistence.Column;
+import com.cursodevsuperior.dslist.entidades.Jogos;
+
+import java.util.Objects;
 
 public class JogosMinDTO {
-    private Long id;
+    private Long jogos_Id;
     private String nome;
     private int ano;
     private String genero;
@@ -12,7 +14,7 @@ public class JogosMinDTO {
     private String descricaoResumida;
 
     public JogosMinDTO(Jogos entity){
-        this.id = entity.getId();
+        this.jogos_Id = entity.getId();
         this.nome = entity.getNome();
         this.ano = entity.getAno();
         this.genero = entity.getGenero();
@@ -22,7 +24,7 @@ public class JogosMinDTO {
     }
 
     public Long getId(){
-        return id;
+        return jogos_Id;
     }
     public String getNome(){
         return nome;
@@ -41,5 +43,17 @@ public class JogosMinDTO {
     }
     public String getDescricaoResumida(){
         return descricaoResumida;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        JogosMinDTO that = (JogosMinDTO) o;
+        return Objects.equals(jogos_Id, that.jogos_Id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(jogos_Id);
     }
 }

@@ -2,12 +2,14 @@ package com.cursodevsuperior.dslist.entidades;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
-@Table(name = "TB_GAME")
+@Table(name = "tb_game")
 public class Jogos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long jogos_Id;
     @Column(name = "title")
     private String nome;
     @Column(name = "game_year")
@@ -29,7 +31,7 @@ public class Jogos {
 
     }
     public Jogos(Long id, String nome, int ano, String genero, String plataformas, double pontuacao, String imgURL, String descricaoResumida, String descricaoDetalhada){
-        this.id = id;
+        this.jogos_Id = id;
         this.nome = nome;
         this.ano = ano;
         this.genero = genero;
@@ -41,11 +43,11 @@ public class Jogos {
     }
 
     public Long getId(){
-        return id;
+        return jogos_Id;
     }
 
     public void setId(Long id){
-        this.id = id;
+        this.jogos_Id = id;
     }
 
     public String getNome(){
@@ -97,4 +99,15 @@ public class Jogos {
         this.descricaoDetalhada = descricaoDetalhada;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Jogos jogos = (Jogos) o;
+        return Objects.equals(jogos_Id, jogos.jogos_Id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(jogos_Id);
+    }
 }
