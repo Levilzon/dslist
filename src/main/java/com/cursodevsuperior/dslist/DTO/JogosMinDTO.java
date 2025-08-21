@@ -1,6 +1,7 @@
 package com.cursodevsuperior.dslist.DTO;
 
 import com.cursodevsuperior.dslist.entidades.Jogos;
+import com.cursodevsuperior.dslist.projection.JogosMinProjection;
 
 import java.util.Objects;
 
@@ -23,6 +24,13 @@ public class JogosMinDTO {
         this.descricaoResumida = entity.getDescricaoRsumida();
     }
 
+    public JogosMinDTO(JogosMinProjection projection){
+        this.jogos_Id = projection.getJogosId();
+        this.nome = projection.getTitle();
+        this.ano = projection.getYear();
+        this.imgURL = projection.getImgURL();
+        this.descricaoResumida = projection.getShortDescription();
+    }
     public Long getId(){
         return jogos_Id;
     }
